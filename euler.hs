@@ -12,7 +12,7 @@ problem2 :: Integer
 problem2 = sum $ filter even $ takeWhile (< 4000000) fibs
 
 -- https://oeis.org/A014445
-thirdFibs = 2 : 0 : zipWith (\x y -> 4 * y + x) thirdFibs (tail thirdFibs)
+evenFibs = 2 : 0 : zipWith (\x y -> 4 * y + x) evenFibs (tail evenFibs)
 
 problem2' :: Integer
-problem2' = sum $ takeWhile (< 4000000) thirdFibs
+problem2' = sum $ takeWhile (< 4000000) evenFibs
