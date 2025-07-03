@@ -29,3 +29,15 @@ problem3 = factor 600_851_475_143 2
           if n > 1 then n else candidate
       | n `mod` candidate == 0 = factor (n `div` candidate) candidate
       | otherwise = factor n (candidate + 1)
+
+-- Problem 4: Largest Palindrome Product
+
+isPalindrome :: Integer -> Bool
+isPalindrome n = str == reverse str
+  where str = show n
+
+problem4 :: Integer
+problem4 = maximum [ x*y
+                   | x <- [999,998..100]
+                   , y <- [999,998..x]
+                   , isPalindrome (x*y)]
