@@ -41,3 +41,8 @@ problem4 = maximum [ x*y
                    | x <- [999,998..100]
                    , y <- [999,998..x]
                    , isPalindrome (x*y)]
+
+-- Problem 5: Smallest Multiple
+
+problem5 :: Integer
+problem5 = foldl lcm 1 [1..20]
