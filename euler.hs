@@ -46,3 +46,14 @@ problem4 = maximum [ x*y
 
 problem5 :: Integer
 problem5 = foldl lcm 1 [1..20]
+
+-- Problem 6: Sum Square Difference
+
+sumSquareDifference :: Int -> Int
+sumSquareDifference n = sqosu - suosq
+  where
+    sqosu = (sum [1..n]) ^ 2
+    suosq = sum [x^2 | x <- [1..n]]
+
+problem6 :: Int
+problem6 = sumSquareDifference 100
