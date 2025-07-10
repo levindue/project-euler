@@ -72,3 +72,8 @@ window k xs
 
 problem8 :: Int
 problem8 = maximum $ map product (window 13 p8in)
+
+-- Problem 16: Power Digit Sum
+
+problem16 :: Int
+problem16 = sum $ map digitToInt $ show (2 ^ 1000)
