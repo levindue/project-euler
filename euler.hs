@@ -1,4 +1,5 @@
 import Data.Char (digitToInt)
+import Data.Function ((&))
 
 -- Problem 1: Multiples of 3 or 5
 
@@ -75,5 +76,8 @@ problem8 = maximum $ map product (window 13 p8in)
 
 -- Problem 16: Power Digit Sum
 
+-- problem16 :: Int
+-- problem16 = sum $ map digitToInt $ show (2 ^ 1000)
+
 problem16 :: Int
-problem16 = sum $ map digitToInt $ show (2 ^ 1000)
+problem16 = (2 ^ 1000) & show & map digitToInt & sum
